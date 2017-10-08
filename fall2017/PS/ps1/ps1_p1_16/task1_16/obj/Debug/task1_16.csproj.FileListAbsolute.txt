@@ -1,0 +1,7 @@
+F:\git gud\sem1_5\task1_16\task1_16\obj\Debug\task1_16.csprojResolveAssemblyReference.cache
+F:\git gud\sem1_5\task1_16\task1_16\obj\Debug\task1_16.csproj.CoreCompileInputs.cache
+F:\git gud\sem1_5\task1_16\task1_16\bin\Debug\task1_16.exe.config
+F:\git gud\sem1_5\task1_16\task1_16\bin\Debug\task1_16.exe
+F:\git gud\sem1_5\task1_16\task1_16\bin\Debug\task1_16.pdb
+F:\git gud\sem1_5\task1_16\task1_16\obj\Debug\task1_16.exe
+F:\git gud\sem1_5\task1_16\task1_16\obj\Debug\task1_16.pdb
