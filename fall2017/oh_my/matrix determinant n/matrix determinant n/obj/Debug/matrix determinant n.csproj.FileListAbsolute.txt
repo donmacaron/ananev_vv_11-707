@@ -1,0 +1,7 @@
+F:\git_gud\fall2017\oh_my\matrix determinant n\matrix determinant n\bin\Debug\matrix determinant n.exe.config
+F:\git_gud\fall2017\oh_my\matrix determinant n\matrix determinant n\bin\Debug\matrix determinant n.exe
+F:\git_gud\fall2017\oh_my\matrix determinant n\matrix determinant n\bin\Debug\matrix determinant n.pdb
+F:\git_gud\fall2017\oh_my\matrix determinant n\matrix determinant n\obj\Debug\matrix determinant n.csprojResolveAssemblyReference.cache
+F:\git_gud\fall2017\oh_my\matrix determinant n\matrix determinant n\obj\Debug\matrix determinant n.csproj.CoreCompileInputs.cache
+F:\git_gud\fall2017\oh_my\matrix determinant n\matrix determinant n\obj\Debug\matrix determinant n.exe
+F:\git_gud\fall2017\oh_my\matrix determinant n\matrix determinant n\obj\Debug\matrix determinant n.pdb
