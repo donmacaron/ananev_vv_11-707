@@ -12,18 +12,18 @@ namespace matrix_determinant_n
         {
             Console.WriteLine("Enter order of your matrix...");
             int rank = int.Parse(Console.ReadLine());
-            int[,] m = new int[rank, rank];
+            double[,] m = new double[rank, rank];
             Console.WriteLine("Enter your matrix (line by line with spaces between elements)");
             for (int i = 0; i < m.GetLength(0); i++)
             {
-                string enterString = Console.ReadLine();
-                string[] massiveString = enterString.Split(new Char[] { ' ' });
+                string stringInput = Console.ReadLine();
+                string[] massiveString = stringInput.Split(new Char[] {' '});
                 for (int j = 0; j < massiveString.Length; j++)
                 {
-                    m[i, j] = int.Parse(massiveString[j]);
+                    m[i, j] = double.Parse(massiveString[j]);
                 }
             }
-            int det = DetCalc(m);
+            double det = DetCalc(m);
             Console.WriteLine("Determinant of your matrix is... {0}",(det));
             Console.ReadKey();
         }
@@ -33,10 +33,10 @@ namespace matrix_determinant_n
             if ((i + j) % 2 == 0) { return 1; }
             else { return -1; }
         }
-        static int[,] CreateSubMat(int[,] m, int i, int j)
+        static double[,] CreateSubMat(double[,] m, int i, int j)
         {
             int order = int.Parse(System.Math.Sqrt(m.Length).ToString());
-            int[,] result = new int[order - 1, order - 1];
+            double[,] result = new double[order - 1, order - 1];
             int x = 0, y = 0;
             for (int l = 0; l < order; l++, x++)
             {
@@ -52,25 +52,21 @@ namespace matrix_determinant_n
                         }
                     }
                 }
-                else
-                {
-                    x--;
-                }
+                else { x--; }
             }
             return result;
         }
         
-        static int DetCalc(int[,] m)
+        static double DetCalc(double[,] m)
         {
             int order = int.Parse(System.Math.Sqrt(m.Length).ToString());
-            
 
             if (order > 2)
             {
-                int value = 0;
+                double value = 0;
                 for (int j = 0; j < order; j++)
                 {
-                    int[,] temp = CreateSubMat(m, 0, j);
+                    double[,] temp = CreateSubMat(m, 0, j);
                     value = value + m[0, j] * (Sign(0, j) * DetCalc(temp));
                 }
                 return value;
