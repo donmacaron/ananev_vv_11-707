@@ -62,7 +62,7 @@ namespace task3_15
             int[] res = new int[arrLen];
             Random rand = new Random();
             for (int i = 0; i < res.Length; i++)
-                res[i] = rand.Next(0,100);
+                res[i] = rand.Next(0,10);
             return res;
         }
     }
