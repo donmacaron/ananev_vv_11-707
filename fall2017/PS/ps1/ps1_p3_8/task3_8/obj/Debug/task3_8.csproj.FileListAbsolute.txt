@@ -1,7 +1,0 @@
-F:\git gud\sem1_5\task3_8\task3_8\bin\Debug\task3_8.exe.config
-F:\git gud\sem1_5\task3_8\task3_8\bin\Debug\task3_8.exe
-F:\git gud\sem1_5\task3_8\task3_8\bin\Debug\task3_8.pdb
-F:\git gud\sem1_5\task3_8\task3_8\obj\Debug\task3_8.csprojResolveAssemblyReference.cache
-F:\git gud\sem1_5\task3_8\task3_8\obj\Debug\task3_8.csproj.CoreCompileInputs.cache
-F:\git gud\sem1_5\task3_8\task3_8\obj\Debug\task3_8.exe
-F:\git gud\sem1_5\task3_8\task3_8\obj\Debug\task3_8.pdb
