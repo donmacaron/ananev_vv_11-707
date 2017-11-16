@@ -10,15 +10,21 @@ namespace ps2_p3_5
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter x for cos(x)...");
-            double x = double.Parse(Console.ReadLine());
-
-            Console.WriteLine("Enter approximation of calculations...");
+            Console.WriteLine("Enter x for k... ちょっと");
+            double k = double.Parse(Console.ReadLine());
+            double temp = 1;
+            Console.WriteLine("Enter approximation of calculations (e)...");
             double e = double.Parse(Console.ReadLine());
 
-            Console.WriteLine("cos(x) = {0}", Cosine(x,e));
+            for(int i=1; i<=k; i++)
+            {
+                Console.WriteLine("(Handmade Cosine) X{0} = {1}", i, Cosine(temp - 1, e));
+                Console.WriteLine("(Math.Cos) X{0} = {1}/n/n", i, Math.Cos(temp - 1));
+                temp = i;
+            }
             Console.ReadKey();
         }
+
 
         static string StepsCount(int steps)
         {
@@ -70,7 +76,7 @@ namespace ps2_p3_5
                 i++;
             }
             while ((Abs(result, temp) > e));
-            Console.WriteLine(StepsCount(i));
+            //Console.WriteLine(StepsCount(i));
             return result;
         }
     }
