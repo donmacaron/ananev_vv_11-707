@@ -1,0 +1,16 @@
+F:\gggg\Sem1-master\ConsGame\ConsGame\bin\Debug\ConsGame.exe.config
+F:\gggg\Sem1-master\ConsGame\ConsGame\bin\Debug\ConsGame.exe
+F:\gggg\Sem1-master\ConsGame\ConsGame\bin\Debug\ConsGame.pdb
+F:\gggg\Sem1-master\ConsGame\ConsGame\obj\Debug\ConsGame.csprojResolveAssemblyReference.cache
+F:\gggg\Sem1-master\ConsGame\ConsGame\obj\Debug\ConsGame.csproj.CoreCompileInputs.cache
+F:\gggg\Sem1-master\ConsGame\ConsGame\obj\Debug\ConsGame.exe
+F:\gggg\Sem1-master\ConsGame\ConsGame\obj\Debug\ConsGame.pdb
+F:\communism is not free\ConsGame\bin\Debug\ConsGame.exe.config
+F:\communism is not free\ConsGame\bin\Debug\ConsGame.exe
+F:\communism is not free\ConsGame\bin\Debug\ConsGame.pdb
+F:\communism is not free\ConsGame\obj\Debug\ConsGame.csprojResolveAssemblyReference.cache
+F:\communism is not free\ConsGame\obj\Debug\ConsGame.csproj.CoreCompileInputs.cache
+F:\communism is not free\ConsGame\obj\Debug\ConsGame.exe
+F:\communism is not free\ConsGame\obj\Debug\ConsGame.pdb
+F:\communism is not free\ConsGame\bin\Debug\Title.txt
+F:\communism is not free\ConsGame\bin\Debug\Splash.txt

@@ -1,0 +1,18 @@
+F:\communism is not free\ConsGame\bin\Debug\Title.txt
+F:\communism is not free\ConsGame\bin\Debug\Splash.txt
+F:\communism is not free\ConsGame\obj\Debug\A Game.csproj.CoreCompileInputs.cache
+F:\communism is not free\ConsGame\bin\Debug\A Game.exe.config
+F:\communism is not free\ConsGame\bin\Debug\A Game.exe
+F:\communism is not free\ConsGame\bin\Debug\A Game.pdb
+F:\communism is not free\ConsGame\obj\Debug\A Game.csprojResolveAssemblyReference.cache
+F:\communism is not free\ConsGame\obj\Debug\A Game.exe
+F:\communism is not free\ConsGame\obj\Debug\A Game.pdb
+F:\communism is not free\A Game\bin\Debug\Title.txt
+F:\communism is not free\A Game\bin\Debug\Splash.txt
+F:\communism is not free\A Game\bin\Debug\A Game.exe.config
+F:\communism is not free\A Game\bin\Debug\A Game.exe
+F:\communism is not free\A Game\bin\Debug\A Game.pdb
+F:\communism is not free\A Game\obj\Debug\A Game.csprojResolveAssemblyReference.cache
+F:\communism is not free\A Game\obj\Debug\A Game.csproj.CoreCompileInputs.cache
+F:\communism is not free\A Game\obj\Debug\A Game.exe
+F:\communism is not free\A Game\obj\Debug\A Game.pdb

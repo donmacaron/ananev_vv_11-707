@@ -1,0 +1,7 @@
+F:\repos\beep_beep\beep_beep\bin\Debug\beep_beep.exe.config
+F:\repos\beep_beep\beep_beep\bin\Debug\beep_beep.exe
+F:\repos\beep_beep\beep_beep\bin\Debug\beep_beep.pdb
+F:\repos\beep_beep\beep_beep\obj\Debug\beep_beep.csprojResolveAssemblyReference.cache
+F:\repos\beep_beep\beep_beep\obj\Debug\beep_beep.csproj.CoreCompileInputs.cache
+F:\repos\beep_beep\beep_beep\obj\Debug\beep_beep.exe
+F:\repos\beep_beep\beep_beep\obj\Debug\beep_beep.pdb
