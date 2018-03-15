@@ -137,6 +137,14 @@ namespace Sem1
             Console.WriteLine("null");
         }
 
+        public DLinkedList<T> Merge(DLinkedList<T> secondList)
+        {
+            DLinkedList<T> result = new DLinkedList<T>();
+
+
+            return result;
+        }
+
         /*
         public IEnumerator<T> GetEnumerator()
         {
