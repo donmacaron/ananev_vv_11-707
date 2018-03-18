@@ -137,6 +137,19 @@ namespace Sem1
             Console.WriteLine("null");
         }
 
+        public void NewList(int j)
+        {
+            Node<int> current = head;
+            count = 0;
+            while (current != null)
+            {
+                current.Data = j * (count - j);
+                count++;
+                current = current.Next;
+            }
+        }
+
+
         public DLinkedList<T> Merge(DLinkedList<T> secondList)
         {
             DLinkedList<T> result = new DLinkedList<T>();
