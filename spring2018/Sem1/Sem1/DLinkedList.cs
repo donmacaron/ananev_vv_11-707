@@ -10,13 +10,13 @@ namespace Sem1
 {
     public class DLinkedList<T> //: IEnumerable<T>
     {
-        Node<int> head;
-        Node<int> tail;
+        Node<T> head;
+        Node<T> tail;
         int count;
 
         public void Add(int data)
         {
-            Node<int> node = new Node<int>(data);
+            Node<T> node = new Node<T>(data);
 
             if (head == null)
                 head = node;
@@ -31,8 +31,8 @@ namespace Sem1
 
         public void AddFirst(int data)
         {
-            Node<int> node = new Node<int>(data);
-            Node<int> temp = head;
+            Node<T> node = new Node<T>(data);
+            Node<T> temp = head;
             node.Next = temp;
             head = node;
             if (count == 0)
@@ -44,7 +44,7 @@ namespace Sem1
 
         public bool Delete(T data)
         {
-            Node<int> current = head;
+            Node<T> current = head;
             //search
             while (current != null)
             {
@@ -88,7 +88,7 @@ namespace Sem1
 
         public bool Contains(T data)
         {
-            Node<int> current = head;
+            Node<T> current = head;
             while (current != null)
             {
                 if (current.Data.Equals(data))
@@ -128,7 +128,7 @@ namespace Sem1
 
         public void ShowList()
         {
-            Node<int> current = head;
+            Node<T> current = head;
             while (current != null)
             {
                 Console.Write($"{current.Data}->");
@@ -139,7 +139,7 @@ namespace Sem1
 
         public void NewList(int j)
         {
-            Node<int> current = head;
+            Node<T> current = head;
             count = 0;
             while (current != null)
             {
@@ -147,6 +147,43 @@ namespace Sem1
                 count++;
                 current = current.Next;
             }
+        }
+
+        public int MaxNum() //not working
+        {
+            int res = 0;
+            int temp = 0;
+            Node<T> current = head;
+            while (current != null)
+            {
+                /*if ((current.Next != null)&&(current.Data == current.Next.Data))
+                    res++;*/
+                temp = current.Data;
+                current = current.Next;
+            }
+            return res;
+        }
+
+        public Node<T>[] Divide() //can't return array of two links
+        {
+            Node<T> current = head;
+            DLinkedList<T> multipleThree = new DLinkedList<T>();
+            DLinkedList<T> normalDigits = new DLinkedList<T>();
+            
+            while (current != null)
+            {
+                if (current.Data % 3 == 0)
+                {
+                    multipleThree.Add(current.Data);
+                }
+                else
+                {
+                    normalDigits.Add(current.Data);
+                }
+                current = current.Next;
+            }
+
+            return new Node<T>[] { multipleThree.head, normalDigits.head };
         }
 
 

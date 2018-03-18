@@ -17,9 +17,13 @@ namespace Sem1
             int k; // k element
             int n; //array size
             int j; // j for the last task
+            int[] array;
+            
+
+
             Console.WriteLine("Input size of array..");
             n = int.Parse(Console.ReadLine());
-            int[] array = new int[n];
+            array = new int[n];
             Console.WriteLine("Input array elements..");
             for(int i = 0; i<array.Length;i++)
             {
@@ -71,10 +75,21 @@ namespace Sem1
 
 
             //#6 Max n. of same elements in DLinkedList
-
+            {
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.Write("\n\nTask #7\n");
+                Console.ForegroundColor = ConsoleColor.White;
+            }
+            Console.Write($"Max same numbers in list is {linkedList.MaxNum()}");
 
 
             //#7 divide DLinkedList into 2: multiples of 3 and everyone else. return array of 2 links with begining of list
+            {
+                Console.ForegroundColor = ConsoleColor.DarkRed;
+                Console.Write("\n\nTask #7\n");
+                Console.ForegroundColor = ConsoleColor.White;
+            }
+            linkedList.Divide();
 
 
 
@@ -89,7 +104,7 @@ namespace Sem1
             linkedList.NewList(j);
             linkedList.ShowList();
             Console.ForegroundColor = ConsoleColor.DarkGreen;
-            Console.WriteLine($"Every element is {j}*({linkedList.Count}-{j})");
+            Console.WriteLine($"Every element is {j}*(n-{j})");
             Console.ForegroundColor = ConsoleColor.White;
 
 
@@ -102,31 +117,31 @@ namespace Sem1
 
 
 
-        static int[] Merge_Sort(int[] massive)
+        static int[] Merge_Sort(int[] arr)
         {
-            if (massive.Length == 1)
-                return massive;
-            int mid_point = massive.Length / 2;
-            return Merge(Merge_Sort(massive.Take(mid_point).ToArray()),
-                Merge_Sort(massive.Skip(mid_point).ToArray()));
+            if (arr.Length == 1)
+                return arr;
+            int mid_point = arr.Length / 2;
+            return Merge(Merge_Sort(arr.Take(mid_point).ToArray()),
+                Merge_Sort(arr.Skip(mid_point).ToArray()));
         }
 
-        static int[] Merge(int[] mass1, int[] mass2)
+        static int[] Merge(int[] arr1, int[] arr2)
         {
             int a = 0, b = 0;
-            int[] merged = new int[mass1.Length + mass2.Length];
-            for (int i = 0; i < mass1.Length + mass2.Length; i++)
+            int[] merged = new int[arr1.Length + arr2.Length];
+            for (int i = 0; i < arr1.Length + arr2.Length; i++)
             {
-                if (b < mass2.Length && a < mass1.Length)
-                    if (mass1[a] > mass2[b])
-                        merged[i] = mass2[b++];
+                if (b < arr2.Length && a < arr1.Length)
+                    if (arr1[a] > arr2[b])
+                        merged[i] = arr2[b++];
                     else //if int go for
-                        merged[i] = mass1[a++];
+                        merged[i] = arr1[a++];
                 else
-                  if (b < mass2.Length)
-                    merged[i] = mass2[b++];
+                  if (b < arr2.Length)
+                    merged[i] = arr2[b++];
                 else
-                    merged[i] = mass1[a++];
+                    merged[i] = arr1[a++];
             }
             return merged;
         }
