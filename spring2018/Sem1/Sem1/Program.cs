@@ -65,6 +65,22 @@ namespace Sem1
             linkedList.Delete(k);
             linkedList.ShowList();
 
+            //#5 Merge
+
+
+
+            //#6 Max n. of same elements in DLinkedList
+
+
+
+            //#7 divide DLinkedList into 2: multiples of 3 and everyone else. return array of 2 links with begining of list
+
+
+
+            //#8 orderd list with one rule: every element is j*(n-j)
+
+
+
             Console.ReadKey();
         }
     }
