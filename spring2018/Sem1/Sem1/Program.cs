@@ -13,7 +13,7 @@ namespace Sem1
         static void Main(string[] args)
         {
             DLinkedList<int> linkedList = new DLinkedList<int>();
-            DLinkedList<int> likedList2 = new DLinkedList<int>();
+            DLinkedList<int> linkedList2 = new DLinkedList<int>();
             int k; // k element
             int n; //array size
             int j; // j for the last task
@@ -31,6 +31,8 @@ namespace Sem1
             }
             array = Merge_Sort(array);
 
+
+
             //#1
             {
                 Console.ForegroundColor = ConsoleColor.DarkRed;
@@ -39,6 +41,7 @@ namespace Sem1
             }
             linkedList.CreateFromIntArr(array);
 
+            /*
             //#2
             {
                 Console.ForegroundColor = ConsoleColor.DarkRed;
@@ -73,15 +76,16 @@ namespace Sem1
             //#5 Merge
 
 
-
+            */
             //#6 Max n. of same elements in DLinkedList
+            linkedList.ShowList();
             {
                 Console.ForegroundColor = ConsoleColor.DarkRed;
                 Console.Write("\n\nTask #7\n");
                 Console.ForegroundColor = ConsoleColor.White;
             }
             Console.Write($"Max same numbers in list is {linkedList.MaxNum()}");
-
+            /*
 
             //#7 divide DLinkedList into 2: multiples of 3 and everyone else. return array of 2 links with begining of list
             {
@@ -92,7 +96,7 @@ namespace Sem1
             linkedList.Divide();
 
 
-
+            */
             //#8 orderd list with one rule: every element is j*(n-j)
             {
                 Console.ForegroundColor = ConsoleColor.DarkRed;
@@ -101,13 +105,13 @@ namespace Sem1
             }
             Console.Write("Input 'j'...\n");
             j = int.Parse(Console.ReadLine());
-            linkedList.NewList(j);
-            linkedList.ShowList();
+            linkedList2 =  linkedList.NewList(j);
+            linkedList2.ShowList();
             Console.ForegroundColor = ConsoleColor.DarkGreen;
-            Console.WriteLine($"Every element is {j}*(n-{j})");
+            Console.WriteLine($"Every element is element {j}*(n- element {j})");
             Console.ForegroundColor = ConsoleColor.White;
-
-
+            /*
+            */
             Console.ReadKey();
         }
 

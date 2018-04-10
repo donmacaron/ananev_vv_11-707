@@ -8,10 +8,11 @@ using System.IO;
 
 namespace Sem1
 {
-    public class DLinkedList<T> //: IEnumerable<T>
+    public class DLinkedList<T> 
     {
         Node<T> head;
         Node<T> tail;
+        Node<T> data;
         int count;
 
         public void Add(int data)
@@ -112,7 +113,7 @@ namespace Sem1
 
         public void Decode(int[] data)
         {
-            FileStream fs1 = new FileStream("C:\\decode.txt", FileMode.OpenOrCreate, FileAccess.Write);
+            FileStream fs1 = new FileStream("D:\\decode.txt", FileMode.OpenOrCreate, FileAccess.Write);
             StreamWriter writer = new StreamWriter(fs1);
             for (int i = 0; i < data.Length; i++)
             {
@@ -137,39 +138,63 @@ namespace Sem1
             Console.WriteLine("null");
         }
 
-        public void NewList(int j)
+        public DLinkedList<T> NewList(int j) 
         {
+            DLinkedList<T> NewList = new DLinkedList<T>();
+            NewList.Add(0);
+            Node<T> NewCur = NewList.head;
             Node<T> current = head;
-            count = 0;
-            while (current != null)
+            int counter = 0;
+            while (counter != j)
             {
-                current.Data = j * (count - j);
-                count++;
+                counter++;
                 current = current.Next;
             }
+            j = current.Data;
+            current = head;
+            while (counter != count)
+            {
+                NewCur.Data = j * (count - current.Data);
+                counter++;
+                NewList.Add(0);
+                NewCur = NewCur.Next;
+            }
+            return NewList;
         }
 
-        public int MaxNum() //not working
+        public int MaxNum() //done
         {
             int res = 0;
+            int max = 1;
             int temp = 0;
             Node<T> current = head;
             while (current != null)
             {
-                /*if ((current.Next != null)&&(current.Data == current.Next.Data))
-                    res++;*/
+                if (current.Next != null)
+                {
+                    if (current.Data == current.Next.Data)
+                    {
+                        res++;
+                        if((res>max)&&(res!=0))
+                        {
+                            max = res;
+                        }
+                    }
+                    else
+                        res = 0; 
+                }
                 temp = current.Data;
                 current = current.Next;
             }
-            return res;
+            return max;
         }
 
-        public Node<T>[] Divide() //can't return array of two links
+        public Node<T>[] Divide()
         {
             Node<T> current = head;
             DLinkedList<T> multipleThree = new DLinkedList<T>();
             DLinkedList<T> normalDigits = new DLinkedList<T>();
-            
+
             while (current != null)
             {
                 if (current.Data % 3 == 0)
@@ -187,25 +212,65 @@ namespace Sem1
         }
 
 
-        public DLinkedList<T> Merge(DLinkedList<T> secondList)
+        public void Merge(DLinkedList<T> list2)
         {
-            DLinkedList<T> result = new DLinkedList<T>();
+            var elem1 = head;
+            while (list2.head != null)
+            {
+                var current = list2.head;
+                if (current.CompareTo(elem1) < 0)
+                {
+                    list2.head = current.Next;
+                    current.Next = head;
+                    head.Previous = current;
+                    head = current;
+                }
+                else if (current.CompareTo(elem1) > 0)
+                {
+                    var elem2 = head.Next;
+                    while (current.CompareTo(elem2) > 0)
+                    {
+                        if (elem2.Next == null)
+                        {
+                            break;
+                        }
+                        elem2 = elem2.Next;
 
+                    }
+                    list2.head = current.Next;
 
-            return result;
+                    elem2.Previous.Next = current;
+                    current.Previous = elem2.Previous;
+                    current.Next = elem2;
+                    elem2.Previous = current;
+                }
+                else if (current.CompareTo(elem1) == 0)
+                {
+                    list2.head = current.Next;
+                    current.Next = head.Next;
+                    current.Previous = head;
+                    head.Next = current;
+
+                }
+            }
+
         }
-
-        /*
-        public IEnumerator<T> GetEnumerator()
-        {
-            DLinkedList<T> list = new DLinkedList<T>();
-            return list.Cast<T>().GetEnumerator();
-        }
-
-        IEnumerator IEnumerable.GetEnumerator()
-        {
-            return GetEnumerator();
-        }
-        */
     }
 }
+
+
+
+            /*
+            public IEnumerator<T> GetEnumerator()
+            {
+                DLinkedList<T> list = new DLinkedList<T>();
+                return list.Cast<T>().GetEnumerator();
+            }
+
+            IEnumerator IEnumerable.GetEnumerator()
+            {
+                return GetEnumerator();
+            }
+            */
+        
+
