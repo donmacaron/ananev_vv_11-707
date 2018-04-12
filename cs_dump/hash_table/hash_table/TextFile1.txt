@@ -1,0 +1,5 @@
+﻿        private int GetArrayPosition(TKey key)
+        {
+            int position = key.GetHashCode() % size;
+            return Math.Abs(position);
+        }
