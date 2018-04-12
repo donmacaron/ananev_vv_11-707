@@ -22,7 +22,7 @@ namespace MergeSort
             long t = 0;
             int iterations = 0;
             Stopwatch watch = new Stopwatch();
-
+            /*
             for (int i = 1; i < 1981; i++)
             {
                 var array = (File.ReadAllLines($@"arrays\{i}.txt", Encoding.Default)
@@ -46,7 +46,7 @@ namespace MergeSort
                     .ToArray(),
                     Encoding.Default);
             }
-
+            */
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("Done!\n" +
                 "Press any key to close this window");
