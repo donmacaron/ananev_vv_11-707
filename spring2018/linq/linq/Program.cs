@@ -117,7 +117,8 @@ namespace linq
             // Task 41  
             var t41 = File.ReadAllLines(@"41.txt", Encoding.Default)
                 .Select(s => new Petrol(s))
-                .
+                .GroupBy(x => x.street, (x, y) => new { street = x, price = y.Max(z => z.price) })
+                .Select(x=> $"Street:{x.street} || Price:{x.price}")
                 .ToArray();
 
             File.WriteAllLines(@"41out.txt",
