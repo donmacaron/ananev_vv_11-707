@@ -117,7 +117,7 @@ namespace linq
             // Task 41  
             var t41 = File.ReadAllLines(@"41.txt", Encoding.Default)
                 .Select(s => new Petrol(s))
-
+                .
                 .ToArray();
 
             File.WriteAllLines(@"41out.txt",
