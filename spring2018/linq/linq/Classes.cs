@@ -94,7 +94,25 @@ namespace linq
             initials = ar[4];
             schoolN = int.Parse(ar[5]);
         }
+    }
 
+    class ReportCard
+    {
+        public string lastName { get; set; }
+        public string initials { get; set; }
+        public int grade { get; set; }
+        public string subject { get; set; }
+        public int mark { get; set; }
+
+        public ReportCard(string str)
+        {
+            var ar = str.Split(' ');
+            lastName = ar[0];
+            initials = ar[1];
+            grade = int.Parse(ar[2]);
+            subject = ar[3];
+            mark = int.Parse(ar[4]);
+        }
     }
 }
 

@@ -1,5 +1,5 @@
-Petrol mark:92 || Street:Big_st. || Max Pirce:79
-Petrol mark:92 || Street:Akibara_st. || Max Pirce:69
-Petrol mark:92 || Street:Pink_st. || Max Pirce:80
-Petrol mark:92 || Street:Blush_st. || Max Pirce:74
-Petrol mark:92 || Street:Akibara_st || Max Pirce:88
+Petrol mark:95 || Street:Pink_st. || Max Pirce:70
+Petrol mark:95 || Street:Akibara_st. || Max Pirce:100
+Petrol mark:95 || Street:Blush_st. || Max Pirce:79
+Petrol mark:95 || Street:Big_st. || Max Pirce:80
+Petrol mark:95 || Street:Akibara_st || Max Pirce:67

@@ -40,7 +40,7 @@ namespace linq
 
 
 
-            // Task 11 не рабоает
+            // Task 11 Не считает общее кол-во часов за пару месяц-год
             var t11 = File.ReadAllLines(@"1.txt", Encoding.Default)
                 .Select(s => new Fitness(s))
                 .GroupBy(x => x.year)
@@ -53,7 +53,7 @@ namespace linq
             File.WriteAllLines(@"11out.txt",
                 t11,
                 Encoding.Default);
-            System.Diagnostics.Process.Start(@"11out.txt");
+            //System.Diagnostics.Process.Start(@"11out.txt");
 
 
 
@@ -73,7 +73,7 @@ namespace linq
 
 
 
-            //Task 31 Неправильно работает
+            //Task 31 Неправильно работает. Только для определенного этажа (Where(x=>x.entrance ==...)
             var t31 = File.ReadAllLines(@"31.txt", Encoding.Default)
                .Select(s => new Deptors(s))
                .Select(x =>
@@ -101,10 +101,14 @@ namespace linq
 
                       return null;
                   })
-               .Where(x => x.entrance == 1)
+               //.Where(x => x.entrance == 1)
                .OrderByDescending(x => x.arrears)
+               //.Select(s => $"Arrear:{s.arrears} || Entrance:{s.entrance} || Flat#:{s.flatN} || Last name:{s.lastName}")
+               .Select(s => new { s.arrears, s.entrance, s.flatN, s.lastName })
+               .GroupBy(x=>x.entrance)
                .Take(3)
-               .Select(s => $"Arrear:{s.arrears} || Entrance:{s.entrance} || Flat#:{s.flatN} || Last name:{s.lastName}")
+               .Select(x=> new { x.Key, x.First().arrears, x.First().flatN, x.First().lastName})
+               .Select(s => $"Arrear:{s.arrears} || Entrance:{s.Key} || Flat#:{s.flatN} || Last name:{s.lastName}")
                .ToArray();
 
             File.WriteAllLines(@"31out.txt",
@@ -115,9 +119,8 @@ namespace linq
 
 
             // Task 41  ПОПЯЧЬСЯ!1
-
             var r = new Random();
-            var marks = new int[] { 92,95,98}; // Will work with array or list
+            var marks = new int[] { 92,95,98}; 
             var m = Enumerable.Range(0, 3)
                 .Select(e => marks[r.Next(marks.Length)]).ToArray();
             
@@ -132,8 +135,6 @@ namespace linq
                 t41,
                 Encoding.Default);
             //System.Diagnostics.Process.Start(@"41out.txt");
-
-
 
 
 
@@ -152,6 +153,24 @@ namespace linq
                 t51,
                 Encoding.Default);
             //System.Diagnostics.Process.Start(@"51out.txt");
+
+
+
+            // Task 61  Неправильно. Не считает среднее
+            var t61 = File.ReadAllLines(@"61.txt", Encoding.Default)
+                .Select(s => new ReportCard(s))
+                .Where(x=> x.lastName == x.lastName )
+                .Where(x=>x.subject==x.subject)
+                .Select(x=> new {x.lastName, x.initials, x.subject,x.mark })
+                .OrderBy(x=>x.lastName)
+                .Select(x=>$"Name:{x.lastName} {x.initials} || Subject:{x.subject} || Mark:{x.mark}")           
+                .ToArray();
+
+            File.WriteAllLines(@"61out.txt",
+                t61,
+                Encoding.Default);
+            System.Diagnostics.Process.Start(@"61out.txt");
+
 
 
             Console.WriteLine("Press any key...");
