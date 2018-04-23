@@ -1,0 +1,5 @@
+School:2 || Max inf score:62 || Name:Donnovan B.N.
+School:3 || Max inf score:93 || Name:BigBoss N.S.
+School:12 || Max inf score:54 || Name:DarkwingDuck D.D.
+School:13 || Max inf score:45 || Name:Bobby B.A.
+School:100 || Max inf score:89 || Name:Beacon B.W.
