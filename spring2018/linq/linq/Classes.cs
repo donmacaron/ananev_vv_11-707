@@ -74,6 +74,28 @@ namespace linq
             price = int.Parse(ar[3]);
         }
     }
+
+    class Exam
+    {
+        public int scoreRus { get; set; }
+        public int scoreMath { get; set; }
+        public int scoreInf { get; set; }
+        public string lastName { get; set; }
+        public string initials { get; set; }
+        public int schoolN { get; set; }
+
+        public Exam(string str)
+        {
+            var ar = str.Split(' ');
+            scoreRus = int.Parse(ar[0]);
+            scoreMath = int.Parse(ar[1]);
+            scoreInf = int.Parse(ar[2]);
+            lastName = ar[3];
+            initials = ar[4];
+            schoolN = int.Parse(ar[5]);
+        }
+
+    }
 }
 
    

@@ -1,5 +1,5 @@
-Last Name:Kiss || School ¹:2
-Last Name:Brutal || School ¹:13
-Last Name:Familkin || School ¹:100
-Last Name:BubbleBobble || School ¹:12
-Last Name:Wizard || School ¹:3
+Petrol mark:92 || Street:Big_st. || Max Pirce:79
+Petrol mark:92 || Street:Akibara_st. || Max Pirce:69
+Petrol mark:92 || Street:Pink_st. || Max Pirce:80
+Petrol mark:92 || Street:Blush_st. || Max Pirce:74
+Petrol mark:92 || Street:Akibara_st || Max Pirce:88
