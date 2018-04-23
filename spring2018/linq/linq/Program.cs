@@ -101,7 +101,7 @@ namespace linq
 
                       return null;
                   })
-               //.Where(x => x.entrance == 1)
+               .Where(x => x.entrance == 1)
                .OrderByDescending(x => x.arrears)
                //.Select(s => $"Arrear:{s.arrears} || Entrance:{s.entrance} || Flat#:{s.flatN} || Last name:{s.lastName}")
                .Select(s => new { s.arrears, s.entrance, s.flatN, s.lastName })
