@@ -46,21 +46,21 @@ namespace AVL_Tree
             else if (n.data < current.data)
             {
                 current.left = RecursiveInsert(current.left, n);
-                current = balance_tree(current);
+                current = Balance_tree(current);
             }
             else if (n.data > current.data)
             {
                 current.right = RecursiveInsert(current.right, n);
-                current = balance_tree(current);
+                current = Balance_tree(current);
             }
             return current;
         }
-        private Node balance_tree(Node current)
+        private Node Balance_tree(Node current)
         {
-            int b_factor = balance_factor(current);
+            int b_factor = Balance_factor(current);
             if (b_factor > 1)
             {
-                if (balance_factor(current.left) > 0)
+                if (Balance_factor(current.left) > 0)
                 {
                     current = RotateLL(current);
                 }
@@ -71,7 +71,7 @@ namespace AVL_Tree
             }
             else if (b_factor < -1)
             {
-                if (balance_factor(current.right) > 0)
+                if (Balance_factor(current.right) > 0)
                 {
                     current = RotateRL(current);
                 }
@@ -83,8 +83,9 @@ namespace AVL_Tree
             return current;
         }
         public void Delete(int target)
-        {//and here
+        {
             root = Delete(root, target);
+            Console.WriteLine($"({target}) deleted!");
         }
         private Node Delete(Node current, int target)
         {
@@ -97,9 +98,9 @@ namespace AVL_Tree
                 if (target < current.data)
                 {
                     current.left = Delete(current.left, target);
-                    if (balance_factor(current) == -2)//here
+                    if (Balance_factor(current) == -2)//here
                     {
-                        if (balance_factor(current.right) <= 0)
+                        if (Balance_factor(current.right) <= 0)
                         {
                             current = RotateRR(current);
                         }
@@ -113,9 +114,9 @@ namespace AVL_Tree
                 else if (target > current.data)
                 {
                     current.right = Delete(current.right, target);
-                    if (balance_factor(current) == 2)
+                    if (Balance_factor(current) == 2)
                     {
-                        if (balance_factor(current.left) >= 0)
+                        if (Balance_factor(current.left) >= 0)
                         {
                             current = RotateLL(current);
                         }
@@ -138,9 +139,9 @@ namespace AVL_Tree
                         }
                         current.data = parent.data;
                         current.right = Delete(current.right, parent.data);
-                        if (balance_factor(current) == 2)//rebalancing
+                        if (Balance_factor(current) == 2)//rebalancing
                         {
-                            if (balance_factor(current.left) >= 0)
+                            if (Balance_factor(current.left) >= 0)
                             {
                                 current = RotateLL(current);
                             }
@@ -159,7 +160,7 @@ namespace AVL_Tree
         {
             if (Find(key, root).data == key)
             {
-                Console.WriteLine("{0} was found!", key);
+                Console.WriteLine($"{key} was found!");
             }
             else
             {
@@ -204,30 +205,30 @@ namespace AVL_Tree
             if (current != null)
             {
                 InOrderDisplayTree(current.left);
-                Console.Write("({0}) ", current.data);
+                Console.Write($"({current.data}) ");
                 InOrderDisplayTree(current.right);
             }
         }
-        private int max(int l, int r)
+        private int Max(int l, int r)
         {
             return l > r ? l : r;
         }
-        private int getHeight(Node current)
+        private int GetHeight(Node current)
         {
             int height = 0;
             if (current != null)
             {
-                int l = getHeight(current.left);
-                int r = getHeight(current.right);
-                int m = max(l, r);
+                int l = GetHeight(current.left);
+                int r = GetHeight(current.right);
+                int m = Max(l, r);
                 height = m + 1;
             }
             return height;
         }
-        private int balance_factor(Node current)
+        private int Balance_factor(Node current)
         {
-            int l = getHeight(current.left);
-            int r = getHeight(current.right);
+            int l = GetHeight(current.left);
+            int r = GetHeight(current.right);
             int b_factor = l - r;
             return b_factor;
         }
