@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{126FAC84-8FF3-4C8A-A986-55E4FBE4510D}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ConsoleApp4</RootNamespace>
+    <RootNamespace>RegexStudy</RootNamespace>
     <AssemblyName>ConsoleApp4</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
