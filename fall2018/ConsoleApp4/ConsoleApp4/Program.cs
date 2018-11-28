@@ -13,10 +13,15 @@ namespace ConsoleApp4
     {
         static void Main(string[] args)
         {
-            EmailCheck();
-            PhoneCheck();
-            PasswordCheck();
-            IpCheck();
+            //EmailCheck();
+            //PhoneCheck();
+            //PasswordCheck();
+            //IpCheck();
+            //Task2C();
+            //Task3B();
+            //Task3C();
+            //Task4B();
+            Task5B();
         }
 
 
@@ -81,7 +86,7 @@ namespace ConsoleApp4
             Console.WriteLine("Result:");
             string pattern = @"^[13579]*[0-9]{0,2}[13579]+[0-9]{0,2}[13579]*$";
             int count = 0;
-            while (count < 10)
+            while (count < 100)
             {
                 var str = rand.Next(100, 1000000).ToString();
                 if (Regex.IsMatch(str, pattern))
@@ -127,7 +132,7 @@ namespace ConsoleApp4
             Console.WriteLine("===##-TASK5B-##===");
             Random rand = new Random();
             Console.WriteLine("Result:");
-            string pattern = @"[02468][02468]{2,}";
+            string pattern = @"\d*[02468][02468]\d*[02468][02468]";
             int count = 0;
             while (count < 10)
             {
